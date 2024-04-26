@@ -1,0 +1,18 @@
+package com.example.demo.springbootjsp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemospringbootjspApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemospringbootjspApplication.class, args);
+		String Str = "Swadeep";
+		System.out.println(Str.charAt(3));
+		System.out.println(Str.indexOf('d'));
+		System.out.println(Str.compareToIgnoreCase("Sweep"));
+	
+	}
+
+}

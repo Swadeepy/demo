@@ -1,0 +1,47 @@
+package com.example.demo.springbootjsp;
+
+import java.util.HashMap;
+import java.util.Iterator;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.Map;
+
+@SpringBootApplication
+public class DemospringbootjspApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemospringbootjspApplication.class, args);
+		/*
+		 * String Str = "Swadeep"; System.out.println(Str.charAt(3));
+		 * System.out.println(Str.indexOf('d'));
+		 * System.out.println(Str.compareToIgnoreCase("SwAdeep"));
+		 */
+		
+		Map<Integer,String> strmap = new HashMap<>();
+		
+		strmap.put(1,"Swadeep");
+		strmap.put(2,"Sunny");
+		strmap.put(3,"Venu");
+		
+		String strMapName = strmap.get(1);
+		System.out.println(strMapName);
+		
+		Iterator<Map.Entry<Integer,String>> iterator = strmap.entrySet().iterator();
+        
+		while (iterator.hasNext()) {
+            Map.Entry<Integer,String> entry = iterator.next();
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+            
+            if(value.equals("Sunny")) {
+            	entry.setValue("Anvida");
+            }
+		}
+		
+		System.out.println(strmap);
+		
+	
+	}
+
+}
